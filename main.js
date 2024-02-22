@@ -63,15 +63,24 @@ const calculatArray=(numbersArray)=>{
 const numbers=[2,2,2,2];//enter your number array.
 const finalCalculation=calculatArray(numbers);
 
+console.log(finalCalculation);
 
 //task 06
 //array function to combine two array and finding the maximum value of it.
 
 console.log('============ array function to combine two array and finding the maximum value of it.')
 
-const numberArray1=[4,3,5,6,8];
-const numberArray2=[9,5,1,3,5];
 
 const combinedNumberArray=(arrayOne,arrayTwo)=>{
-    
+    const newArray=[...arrayOne,...arrayTwo];
+    const maxNumOfArray= Math.max(...newArray)
+    return maxNumOfArray;
 }
+
+const numberArray1=[4,3,5,6,8,25];//enter your number array
+const numberArray2=[9,5,1,3,5,23];//enter your number array
+
+const finalArray=combinedNumberArray(numberArray1,numberArray2);
+console.log(finalArray);
+
+
